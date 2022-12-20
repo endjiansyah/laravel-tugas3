@@ -30,7 +30,7 @@ class AuthController extends Controller
         session()->put('logged', true);
         session()->put('siapahayo', $user->username);
         session()->put('idUser', $user->id);
-        return redirect()->route('article.index');
+        return redirect()->route('index');
     }
 
     function logout()

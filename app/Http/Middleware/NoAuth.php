@@ -18,7 +18,7 @@ class NoAuth
     {
         if (!session()->isStarted()) session()->start();
         if (session()->get('logged', false)) {
-            return redirect()->route('article.index');
+            return redirect()->route('index');
         }
         return $next($request);
     }
